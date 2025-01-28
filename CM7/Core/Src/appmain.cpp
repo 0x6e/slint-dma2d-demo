@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 #include <main.h>
-#include <slint-stm32.h>
+#include <slint-stm32-dma2d.h>
 #include <stdio.h>
 #include <stm32h747i_discovery.h>
 #include <stm32h747i_discovery_lcd.h>
@@ -60,7 +60,7 @@ extern "C" int appmain() {
     Error_Handler();
   }
 
-  slint_stm32_init(SlintPlatformConfiguration{
+  slint_stm32_dma2d_init(SlintPlatformConfiguration{
       .rotation =
           slint::platform::SoftwareRenderer::RenderingRotation::Rotate90});
 
