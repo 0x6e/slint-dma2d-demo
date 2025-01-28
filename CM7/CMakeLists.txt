@@ -17,6 +17,8 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
+option(SLINT_BUILD_FROM_SOURCE "Build Slint from source" ON)
+
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
 # Enable compile command to ease indexing with e.g. clangd
@@ -39,6 +41,9 @@ project(${CMAKE_PROJECT_NAME})
 list(PREPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../cmake")
 
 set(SLINT_TARGET_ARCHITECTURE thumbv7em-none-eabihf)
+
+add_subdirectory(3rdparty)
+
 find_package(Slint 1.9.0)
 
 # Create an executable object type

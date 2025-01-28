@@ -1,0 +1,3 @@
+[submodule "CM7/3rdparty/slint"]
+	path = CM7/3rdparty/slint
+	url = https://github.com/0x6e/slint.git
