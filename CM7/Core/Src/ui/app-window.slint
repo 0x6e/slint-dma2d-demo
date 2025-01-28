@@ -1,28 +1,24 @@
-import { Button, VerticalBox, HorizontalBox } from "std-widgets.slint";
+// Copyright © SixtyFPS GmbH <info@slint.dev>
+// SPDX-License-Identifier: MIT
+
+import { HorizontalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
-    in-out property<int> counter: 42;
-    callback request-increase-value();
-    VerticalBox {
-        Image {
-            source: @image-url("MadeWithSlint-logo-light.svg");
-            preferred-width: 256px;
-            min-height: 48px;
+    HorizontalBox {
+        Rectangle {
+            background: red;
+            width: 50px;
+            height: 50px;
         }
-
-        Text {
-            text: "Counter: \{root.counter}";
-            horizontal-alignment: center;
+        Rectangle {
+            background: green;
+            width: 50px;
+            height: 50px;
         }
-
-        HorizontalBox {
-            alignment: center;
-            Button {
-                text: "Increase value";
-                clicked => {
-                    root.request-increase-value();
-                }
-            }
+        Rectangle {
+            background: blue;
+            width: 50px;
+            height: 50px;
         }
-     }
+    }
 }

@@ -66,9 +66,6 @@ extern "C" int appmain() {
 
   auto app_window = AppWindow::create();
 
-  app_window->on_request_increase_value(
-      [&] { app_window->set_counter(app_window->get_counter() + 1); });
-
   app_window->run();
 
   return 0;
