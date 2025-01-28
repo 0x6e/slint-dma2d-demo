@@ -1,12 +1,12 @@
-# Slint MCU C++ Template for STM32H747I-DISCO boards
+# Slint DMA2D Demo for STM32H747I-DISCO boards
 
-A template for a C++ application running on an [STM32H747I-DISCO Discovery kit](https://www.st.com/en/evaluation-tools/stm32h747i-disco.html) that's using [Slint](https://slint.dev) for the user interface, CMake for the build system.
+This repository serves as a playground for getting an async rendering API for [Slint](https://slint.dev) working with DMA2D
+on the [STM32H747I-DISCO Discovery kit](https://www.st.com/en/evaluation-tools/stm32h747i-disco.html).
 
 ## About
 
-This template helps you get started developing a C++ application with Slint as toolkit
-for the user interface. It demonstrates the integration between the `.slint` UI markup and
-C++ code, how to trigger react to callbacks, get and set properties and use basic widgets.
+This demo is very much a work in progress. The goal is to produce an API similar to that requested in
+[issue #5774](https://github.com/slint-ui/slint/issues/5774).
 
 ## Prerequisites
 
@@ -24,10 +24,3 @@ In order to use this template and build a C++ application, you need to install a
 1. Open this folder with VS code.
 2. Configure the project either via "CMake: Select Configure Preset" from the command palette or the CMake extension panel.
 3. Build, Flash to Device, and debug by hitting `F5` or running the `CMake: Debug` command from the command palette.
-
-## Next Steps
-
-We hope that this template helps you get started and you enjoy exploring making user interfaces with Slint. To learn more
-about the Slint APIs and the `.slint` markup language check out our [online documentation](https://slint.dev/docs/cpp/).
-
-Don't forget to edit this README to replace it by yours.
